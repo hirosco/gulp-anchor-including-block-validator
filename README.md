@@ -1,5 +1,7 @@
 # gulp-anchor-including-block-validator
 
+[![npm version](https://badge.fury.io/js/gulp-anchor-including-block-validator.svg)](https://badge.fury.io/js/gulp-anchor-including-block-validator)
+
 simple strange validator.
 if html has anchor tag including block level elements, an error is returned.
 like the rules of xhtml.
