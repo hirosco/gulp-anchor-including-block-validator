@@ -25,10 +25,11 @@ module.exports = function(search) {
       // ファイルの内容をcontentsに読み込み
       var contents = String(file.contents);
 
-      var keywords = "address|article|aside|blockquote|details|dialog|dd|div|dl|dt|fieldset|figcaption|figure|footer|form|h1|h2|h3|h4|h5|h6|header|hgroup|hr|li|main|nav|ol|p|pre|section|table|ul|"
+      var keywords = "address|article|aside|blockquote|details|dialog|dd|div|dl|dt|fieldset|figcaption|figure|footer|form|h1|h2|h3|h4|h5|h6|header|hgroup|hr|li|main|nav|ol|p|pre|section|table|ul|";
+      var keywords = keywords + search;
 
       // check block level element in a tag
-      var check = new RegExp("<a .+?>([^<]*?)<(?:"+keywords+search+")(.|\r|\n)*?</a>", "g");
+      var check = new RegExp("<a.+?>([^<]*?)<(?:"+keywords+")([^<]*?)</(?:"+keywords+")([^<]*?)</a>", "g");
       var result = check.test(contents);
       var match = contents.match(check);
 
