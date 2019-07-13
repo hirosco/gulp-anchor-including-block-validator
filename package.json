@@ -1,0 +1,33 @@
+{
+  "name": "gulp-anchor-including-block-validator",
+  "version": "0.0.1",
+  "description": "html anchor tag including block level elements validator for gulp",
+  "main": "index.js",
+  "dependencies": {
+    "replacestream": "^4.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulpplugin",
+    "validator",
+    "html",
+    "xhtml",
+    "anchor",
+    "atag"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hirosco/gulp-anchor-including-block-validator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hirosco/gulp-anchor-including-block-validator/issues"
+  },
+  "homepage": "https://github.com/hirosco/gulp-anchor-including-block-validator",
+  "author": "hirosco",
+  "license": "MIT"
+}
