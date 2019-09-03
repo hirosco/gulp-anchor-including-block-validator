@@ -29,13 +29,19 @@ module.exports = function(search) {
       var keywords = keywords + search;
 
       // check block level element in a tag
-      var check = new RegExp("<a.+?>([^<]*?)<(?:"+keywords+")([^<]*?)</(?:"+keywords+")([^<]*?)</a>", "g");
-      var result = check.test(contents);
+      var check = new RegExp("<a.+?>([^]*?)</a>", "g");
+      // var result = check.test(contents);
       var match = contents.match(check);
 
-      if (result) {
-        // console.log('WARNING A TAG : ' + match);
-        this.emit('error', new PluginError(atag, 'WARNING A TAG : ' + match));
+      var contents2 = String(match);
+
+      var check2 = new RegExp("<(?:"+keywords+").+?>", "g");
+      var result2 = check2.test(contents2);
+      var match2 = contents2.match(check2);
+
+      if (result2) {
+        // console.log('WARNING A TAG : ' + match2);
+        this.emit('error', new PluginError(atag, 'WARNING A TAG : ' + match2));
       } else {
         // console.log('no problem');
       }
