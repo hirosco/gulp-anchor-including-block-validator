@@ -1,6 +1,6 @@
 {
   "name": "gulp-anchor-including-block-validator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "html anchor tag including block level elements validator for gulp",
   "main": "index.js",
   "dependencies": {
