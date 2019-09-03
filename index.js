@@ -29,7 +29,7 @@ module.exports = function(search) {
       var keywords = keywords + search;
 
       // check block level element in a tag
-      var check = new RegExp("<a.+?>([^]*?)</a>", "g");
+      var check = new RegExp("<a(?: .+?)?>([^]*?)</a>", "g");
       // var result = check.test(contents);
       var match = contents.match(check);
 
